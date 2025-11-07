@@ -44,7 +44,7 @@ const Portfolio = () => {
       transition={{ duration: 0.5 }}
     >
       <Helmet>
-        <title>Portfolio - AMOS Luxury Media</title>
+        <title>Portfolio - Pixillab</title>
         <meta name="description" content="Explore our portfolio of luxury videography and photography work. View wedding films, event coverage, portraits, and commercial projects." />
       </Helmet>
 

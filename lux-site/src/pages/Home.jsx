@@ -34,7 +34,7 @@ const Home = () => {
       transition={{ duration: 0.5 }}
     >
       <Helmet>
-        <title>AMOS - Luxury Videography & Photography</title>
+        <title>Pixillab - Luxury Videography & Photography</title>
         <meta name="description" content="Premium videography and photography services for weddings, events, and branding. Capturing moments, crafting memories with award-winning quality." />
       </Helmet>
 
@@ -45,7 +45,7 @@ const Home = () => {
       />
 
       <Section
-        title="Why Choose AMOS"
+        title="Why Choose Pixillab"
         subtitle="Experience the perfect blend of artistry and professionalism"
         centered
       >

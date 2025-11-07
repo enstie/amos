@@ -20,8 +20,8 @@ const About = () => {
       transition={{ duration: 0.5 }}
     >
       <Helmet>
-        <title>About Us - AMOS Luxury Media</title>
-        <meta name="description" content="Learn about AMOS - award-winning luxury videography and photography studio with over 50 industry awards and 500+ satisfied clients." />
+        <title>About Us - Pixillab</title>
+        <meta name="description" content="Learn about Pixillab - award-winning luxury videography and photography studio with over 50 industry awards and 500+ satisfied clients." />
       </Helmet>
 
       <Hero
@@ -32,7 +32,7 @@ const About = () => {
       />
 
       <Section
-        title="About AMOS"
+        title="About Pixillab"
         subtitle="Where artistry meets excellence"
       >
         <div className="about-content">
@@ -44,7 +44,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <p>
-              AMOS was founded with a singular vision: to elevate videography and photography
+              Pixillab was founded with a singular vision: to elevate videography and photography
               into an art form that transcends traditional documentation. With over a decade
               of experience, we've perfected the craft of visual storytelling.
             </p>
@@ -70,7 +70,7 @@ const About = () => {
           >
             <img
               src="https://via.placeholder.com/600x800/1a1b1e/E6CF8B?text=About+Image"
-              alt="AMOS team at work"
+              alt="Pixillab team at work"
               loading="lazy"
             />
           </motion.div>
@@ -110,7 +110,7 @@ const About = () => {
             luxury isn't just about expensive equipment or grand venues – it's about the
             thoughtfulness, care, and passion we pour into every frame we capture."
           </blockquote>
-          <p className="philosophy-signature">— The AMOS Team</p>
+          <p className="philosophy-signature">— The Pixillab Team</p>
         </motion.div>
       </Section>
     </motion.div>

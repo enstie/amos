@@ -1,4 +1,4 @@
-# AMOS Luxury Videography & Photography Website
+# Pixillab Luxury Videography & Photography Website
 
 A modern, luxury-themed React static website for a videography and photography business, built with Vite, React, Framer Motion, and a gold/dark design system.
 
@@ -234,7 +234,7 @@ This project is proprietary and confidential.
 
 ## 🤝 Support
 
-For questions or support, please contact hello@amosluxury.com
+For questions or support, please contact hello@pixillab.com
 
 ## 🎯 Browser Support
 
@@ -276,4 +276,4 @@ For questions or support, please contact hello@amosluxury.com
 
 ---
 
-**Made with ♥ for AMOS Luxury Media**
+**Made with ♥ for Pixillab**

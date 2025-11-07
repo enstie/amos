@@ -61,7 +61,7 @@ const Services = () => {
       transition={{ duration: 0.5 }}
     >
       <Helmet>
-        <title>Services - AMOS Luxury Media</title>
+        <title>Services - Pixillab</title>
         <meta name="description" content="Premium videography and photography services including weddings, events, branding, and promotional content. Custom packages available." />
       </Helmet>
 
