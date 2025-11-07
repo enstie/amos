@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3 className="gold-gradient-text">AMOS</h3>
+            <h3 className="gold-gradient-text">Pixillab</h3>
             <p>Capturing Moments, Crafting Memories</p>
           </div>
 
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} AMOS Luxury Media. All rights reserved.</p>
+          <p>&copy; {currentYear} Pixillab. All rights reserved.</p>
         </div>
       </div>
     </footer>

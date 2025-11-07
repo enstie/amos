@@ -34,7 +34,7 @@ const NavBar = () => {
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo" aria-label="Home">
-          <span className="logo-text gold-gradient-text">AMOS</span>
+          <span className="logo-text gold-gradient-text">Pixillab</span>
         </Link>
 
         <button

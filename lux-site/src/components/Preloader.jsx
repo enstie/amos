@@ -23,7 +23,7 @@ const Preloader = () => {
           animate={{ y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          AMOS
+          Pixillab
         </motion.div>
         <motion.div
           className="logo-tagline"

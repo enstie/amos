@@ -61,8 +61,8 @@ const Contact = () => {
       transition={{ duration: 0.5 }}
     >
       <Helmet>
-        <title>Contact Us - AMOS Luxury Media</title>
-        <meta name="description" content="Get in touch with AMOS for luxury videography and photography services. Request a quote or schedule a consultation today." />
+        <title>Contact Us - Pixillab</title>
+        <meta name="description" content="Get in touch with Pixillab for luxury videography and photography services. Request a quote or schedule a consultation today." />
       </Helmet>
 
       <Hero
@@ -100,7 +100,7 @@ const Contact = () => {
                 <FaEnvelope className="contact-icon" />
                 <div>
                   <h4>Email</h4>
-                  <a href="mailto:hello@amosluxury.com">hello@amosluxury.com</a>
+                  <a href="mailto:hello@pixillab.com">hello@pixillab.com</a>
                 </div>
               </div>
 
@@ -237,7 +237,7 @@ const Contact = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="AMOS Luxury Media Location"
+              title="Pixillab Location"
             />
           </div>
         </motion.div>
