@@ -103,3 +103,16 @@
     font-size: 1.25rem;
   }
 }
+
+/* Logo image styling */
+.navbar-logo-img {
+  display: block;
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-scrolled .navbar-logo-img {
+  height: 28px;
+  transition: height var(--transition-normal);
+}
