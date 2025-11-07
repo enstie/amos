@@ -1,0 +1,102 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  margin-top: var(--spacing-xl);
+}
+
+.about-text p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+  font-size: 1.0625rem;
+}
+
+.about-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.achievement-card {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background-color: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-gold);
+}
+
+.achievement-icon {
+  color: var(--accent-gold);
+  margin-bottom: var(--spacing-md);
+}
+
+.achievement-card h3 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.achievement-card p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.philosophy-content {
+  max-width: 900px;
+  margin: var(--spacing-xl) auto 0;
+  text-align: center;
+}
+
+.philosophy-quote {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  font-style: italic;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  background-color: var(--bg-elevated);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: var(--radius-md);
+}
+
+.philosophy-signature {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-quote {
+    font-size: 1.25rem;
+    padding: var(--spacing-lg);
+  }
+}

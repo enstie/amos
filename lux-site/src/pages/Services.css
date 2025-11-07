@@ -1,0 +1,120 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.custom-quote-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+.custom-quote-content {
+  padding: var(--spacing-xl);
+}
+
+.custom-quote-content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--spacing-md);
+}
+
+.custom-quote-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-xl);
+}
+
+.quote-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--gradient-gold);
+  color: var(--bg-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-gold);
+}
+
+.quote-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(230, 207, 139, 0.5);
+}
+
+.custom-quote-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.custom-quote-image img {
+  width: 100%;
+  height: auto;
+}
+
+.process-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-section h2 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.process-step {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--spacing-sm);
+}
+
+.process-step h4 {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.process-step p {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .custom-quote-section {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
