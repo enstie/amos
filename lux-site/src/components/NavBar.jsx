@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'
 import './NavBar.css'
+import logoImg from '../assets/images/logos/logo.jpg'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,7 +13,6 @@ const NavBar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-    
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -31,10 +30,16 @@ const NavBar = () => {
   ]
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}> 
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo" aria-label="Home">
-          <span className="logo-text gold-gradient-text">Pixillab</span>
+          <img
+            src={logoImg}
+            alt="Pixillab logo"
+            className="navbar-logo-img"
+            height={32}
+            width={128}
+          />
         </Link>
 
         <button
@@ -46,7 +51,7 @@ const NavBar = () => {
           {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
         </button>
 
-        <div className={`navbar-menu ${isOpen ? 'navbar-menu-open' : ''}`}>
+        <div className={`navbar-menu ${isOpen ? 'navbar-menu-open' : ''}`}> 
           {navLinks.map((link) => (
             <Link
               key={link.path}
