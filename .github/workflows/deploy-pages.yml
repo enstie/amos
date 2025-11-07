@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lux-site
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,20 +28,29 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
+          cache-dependency-path: lux-site/package-lock.json
 
       - name: Install dependencies
-        working-directory: lux-site
         run: npm ci
 
-      - name: Build
-        working-directory: lux-site
+      - name: Build (Vite base for GitHub Pages subdirectory)
         env:
           VITE_BASE: /amos/
+          NODE_ENV: production
         run: |
+          echo "Using VITE_BASE=$VITE_BASE"
           npm run build
-          # SPA fallback + disable Jekyll processing
+          # SPA fallback + disable Jekyll
           cp dist/index.html dist/404.html
           touch dist/.nojekyll
+
+      - name: List dist contents (debug)
+        run: |
+          echo "==== DIST TREE ===="
+          ls -R dist | head -100
+          echo "==== INDEX.HTML HEAD ===="
+          sed -n '1,40p' dist/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -49,11 +61,11 @@ jobs:
           path: lux-site/dist
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
