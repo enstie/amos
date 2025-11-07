@@ -5,10 +5,13 @@ import { HelmetProvider } from 'react-helmet-async'
 import App from './App.jsx'
 import './styles/global.css'
 
+// Get base path for GitHub Pages deployment (matches Vite's base config)
+const basename = import.meta.env.BASE_URL
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <App />
       </BrowserRouter>
     </HelmetProvider>

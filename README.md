@@ -28,13 +28,15 @@ On every push to `main`:
 
 If you need a manual deploy, use the Actions tab and trigger the workflow with "Run workflow".
 
-## Redirect from Repository Root
-A root `index.html` has been added to redirect visitors to the live Pages site.
+## Configuration
+- **Base Path**: `VITE_BASE` is set to `/amos/` during CI build to ensure correct asset URLs and routing.
+- **Router**: React Router's `BrowserRouter` is configured with `basename` from `import.meta.env.BASE_URL` to handle subdirectory deployment.
+- **SPA Fallback**: The workflow creates `404.html` so client-side routes work correctly.
 
 ## Troubleshooting
-- Seeing plain text "amos"? That was the old minimal README rendered by GitHub. This new README now links directly to the deployed site.
 - 404s on deep links: The workflow creates a SPA fallback (`404.html`) so client-side routes should work.
-- Asset path issues: `VITE_BASE` is set to `/amos/` during build to ensure correct asset URLs.
+- Asset path issues: Verify `VITE_BASE` is set to `/amos/` during build.
+- Routing issues: The `BrowserRouter` basename is automatically configured from Vite's base path.
 
 ## License
 (Add a license here if desired.)
